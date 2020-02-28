@@ -11,17 +11,17 @@ export class UserServiceConfig {
   providedIn: 'root'
 })
 export class UserService {
-  id = nextId++;
+ 
   private _userName = 'Sherlock Holmes';
 
-  constructor(@Optional() config?: UserServiceConfig) {
-    if (config) { this._userName = config.userName; }
+  constructor() {
+  
   }
 
   get userName() {
     // Demo: add a suffix if this service has been created more than once
-    const suffix = this.id > 1 ? ` times ${this.id}` : '';
-    return this._userName + suffix;
+   
+    return this._userName ;
   }
 }
 
